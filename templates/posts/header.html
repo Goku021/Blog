@@ -1,0 +1,25 @@
+<div class="header">
+    <navbar>
+       <div class="container">
+           <div class="item">
+               <a href="{% url 'index' %}" style="color: black">Home</a> 
+           </div>
+           <div class="item">
+               {% if request.user.is_authenticated %}
+                <form method="post" action="{% url 'logout' %}">
+                {% csrf_token %}
+                <button type="submit" style="border: none; background-color: transparent; text-decoration: underline; cursor: pointer">Logout</button>
+                </form>
+                   {% else %}
+                   <a href="{% url 'login' %}" style="color: black">Login</a> 
+               {% endif %}
+           </div>
+       <div class="item">
+               <a href="{% url 'index' %}" style="color: black">Profile</a> 
+           </div>
+       <div class="item">
+               <a href="{% url 'add_post' %}" style="color: black">Add New Post</a> 
+           </div>
+       </div>
+    </navbar>
+    </div>

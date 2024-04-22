@@ -1,0 +1,11 @@
+{% extends 'index.html' %}
+{% block title %}
+	Logged Out 
+{% endblock %}
+{% block content %}
+	<div class="logout"  style="margin: 50px">
+    <h1>You have been SuccessFully Logged Out........</h1>
+    <button type="submit" style="border: none; padding: 8px; background-color: cornflowerblue; border-radius: 25px; margin-top: 5px">
+        <a href="{% url 'login' %}" style="text-decoration: none; color: black">Login Here</a></button>
+    </div>
+{% endblock %}

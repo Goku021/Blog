@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+{% block title %}
+	Register Here
+{% endblock %}
+{% block content %}
+	<div class="login" style="margin: 50px">
+    
+    <h1>Register  Here:-</h1>
+    <form method="post" action="{% url 'register_new_user' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit" style="border: none; padding: 8px; background-color: cornflowerblue; border-radius: 25px; margin-top: 5px">Register</button>
+    </form>
+    </div>
+{% endblock %}
